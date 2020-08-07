@@ -19,6 +19,14 @@ import java.util.List;
 public class UserServiceImpl implements IUserService {
     @Autowired
     private UserMapper userMapper;
+
+    @Override
+    public Result update(UserEntity userEntity) {
+        userMapper.update(userEntity);
+        return new Result(StatusCode.SUCCESS,"success","更新成功",null);
+
+    }
+
     @Override
     public Result regist(UserEntity userEntity){
         userMapper.save(userEntity, TableName.YINY_USER);

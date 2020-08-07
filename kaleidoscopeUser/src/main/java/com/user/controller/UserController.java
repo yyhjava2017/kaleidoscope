@@ -1,4 +1,5 @@
 package com.user.controller;
+
 import com.common.entity.Result;
 import com.common.entity.StatusCode;
 import com.user.entity.UserEntity;
@@ -19,22 +20,26 @@ public class UserController implements IUserController {
     private IUserService userService;
 
     @Override
-    @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public Result delete(@PathVariable String id) {
         return userService.delete(id);
     }
 
     @Override
-    @RequestMapping(value = "/" ,method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public Result regist(@RequestBody UserEntity userEntity) {
         return userService.regist(userEntity);
     }
 
     @Override
-    @RequestMapping(value = "/" ,method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public Result query(UserEntity userEntity) {
         return userService.query(userEntity);
     }
 
-
+    @Override
+    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    public Result update(UserEntity userEntity) {
+        return userService.update(userEntity);
+    }
 }

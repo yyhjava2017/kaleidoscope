@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.user.dao.UserMapper">
-
-    <delete id="deleteById"  parameterType="string">
-        delete from yiny_user where id = #{_parameter}
-    </delete>
-
-</mapper>

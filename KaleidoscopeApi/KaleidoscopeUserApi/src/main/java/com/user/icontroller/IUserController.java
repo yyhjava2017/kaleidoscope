@@ -11,4 +11,5 @@ public interface IUserController {
     Result regist(UserEntity userEntity);
     Result query(UserEntity userEntity);
     Result delete(String id);
+    Result update(UserEntity userEntity);
 }

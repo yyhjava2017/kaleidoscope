@@ -14,4 +14,6 @@ public interface IUserService{
     Result query(UserEntity userEntity);
 
     Result delete(String id);
+
+    Result update(UserEntity userEntity);
 }
