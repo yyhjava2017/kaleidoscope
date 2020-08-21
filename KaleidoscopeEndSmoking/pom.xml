@@ -9,19 +9,24 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>KaleidoscopeApi</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>KaleidoscopeUserApi</module>
-        <module>KaleidoscopeEndSmokApi</module>
-    </modules>
+    <artifactId>KaleidoscopeEndSmoking</artifactId>
+
     <dependencies>
+        <dependency>
+            <groupId>com.yiny</groupId>
+            <artifactId>KaleidoscopeEndSmokApi</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <artifactId>kaleidoscopeBase</artifactId>
+            <groupId>com.yiny</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <artifactId>kaleidoscope_common</artifactId>
             <groupId>com.yiny</groupId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
-
 </project>

@@ -6,4 +6,5 @@ package com.common.constant;
  */
 public class TableName {
     public static final String YINY_USER = "yiny_user";
+    public static final String YINY_ARTICLE = "yiny_article";
 }

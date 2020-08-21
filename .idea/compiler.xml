@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="kaleidoscopeBase" />
         <module name="kaleidoscopeCommon" />
+        <module name="KaleidoscopeEndSmokApi" />
+        <module name="KaleidoscopeEndSmoking" />
         <module name="kaleidoscopeUser" />
         <module name="KaleidoscopeUserApi" />
       </profile>

@@ -30,24 +30,21 @@ public class ReflectionUtils {
         }
         for (int i = 0; i < declaredFields.length; i++) {
             if (i < declaredFields.length - 1) {
-                sbFileds.append(declaredFields[i].getName());
+                String rawfiled = declaredFields[i].getName();
+                //加入驼峰命名转化
+                sbFileds.append(toHumpNaming(rawfiled));
                 sbFileds.append(",");
                 declaredFields[i].setAccessible(true);
                 //如果是字符类型的数值，需要给值加上单引号
-                if(declaredFields[i].get(obj) instanceof String){
-                    sbValues.append("'");
-                    sbValues.append(declaredFields[i].get(obj));
-                    sbValues.append("'");
-                }else{
-                    sbValues.append(declaredFields[i].get(obj));
-                }
+                getValue(declaredFields[i].get(obj),sbValues);
 
                 declaredFields[i].setAccessible(false);
                 sbValues.append(",");
             } else {
                 sbFileds.append(declaredFields[i].getName());
                 declaredFields[i].setAccessible(true);
-                sbValues.append(declaredFields[i].get(obj));
+                //如果是字符类型的数值，需要给值加上单引号
+                getValue(declaredFields[i].get(obj),sbValues);
                 declaredFields[i].setAccessible(false);
             }
         }
@@ -56,8 +53,27 @@ public class ReflectionUtils {
         return map;
 
     }
-
-
+    private static void getValue(Object obj,StringBuffer sbValues ){
+        if(obj instanceof String){
+            sbValues.append("'");
+            sbValues.append(obj);
+            sbValues.append("'");
+        }else{
+            sbValues.append(obj);
+        }
+    }
+    public static String toHumpNaming(String rawStr){
+        StringBuffer sb = new StringBuffer();
+        for(int i=0;i<rawStr.length();i++){
+            char c = rawStr.charAt(i);
+            if(Character.isUpperCase(c)){
+                sb.append("_"+Character.toLowerCase(c));
+            }else{
+                sb.append(c);
+            }
+        }
+        return sb.toString();
+    }
 
 
 
