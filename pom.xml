@@ -13,6 +13,9 @@
         <module>KaleidoscopeApi</module>
         <module>kaleidoscopeUser</module>
         <module>KaleidoscopeEndSmoking</module>
+        <module>testDemo</module>
+        <module>kaleidoscopeBpm</module>
+        <module>kaleidoscopeWeb</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -31,7 +34,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
