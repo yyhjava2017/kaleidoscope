@@ -2,17 +2,43 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="kaleidoscopeBase" />
-        <module name="kaleidoscopeCommon" />
+        <module name="kaleidoscopeJbpmApi" />
         <module name="KaleidoscopeEndSmokApi" />
-        <module name="KaleidoscopeEndSmoking" />
+        <module name="kaleidoscopeJbpm" />
         <module name="kaleidoscopeUser" />
         <module name="KaleidoscopeUserApi" />
+        <module name="testDemo" />
+        <module name="KaleidoscopeEndSmoking" />
+        <module name="kaleidoscopeCommon" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kaleidoscopeBpm" target="1.8" />
+      <module name="kaleidoscopeBpmApi" target="1.8" />
+      <module name="kaleidoscopeUser" target="1.8" />
+      <module name="kaleidoscopeWeb" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="KaleidoscopeEndSmokApi" options="-parameters" />
+      <module name="KaleidoscopeEndSmoking" options="-parameters" />
+      <module name="KaleidoscopeUserApi" options="-parameters" />
+      <module name="kaleidoscopeBase" options="-parameters" />
+      <module name="kaleidoscopeBpm" options="-parameters" />
+      <module name="kaleidoscopeBpmApi" options="-parameters" />
+      <module name="kaleidoscopeCommon" options="-parameters" />
+      <module name="kaleidoscopeJbpm" options="-parameters" />
+      <module name="kaleidoscopeJbpmApi" options="-parameters" />
+      <module name="kaleidoscopeUser" options="-parameters" />
+      <module name="kaleidoscopeWeb" options="-parameters" />
+      <module name="testDemo" options="-parameters" />
+    </option>
   </component>
 </project>
