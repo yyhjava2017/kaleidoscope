@@ -11,11 +11,11 @@
         <module>kaleidoscopeCommon</module>
         <module>kaleidoscopeBase</module>
         <module>KaleidoscopeApi</module>
-        <module>kaleidoscopeUser</module>
+       <!-- <module>kaleidoscopeUser</module>-->
         <module>KaleidoscopeEndSmoking</module>
         <module>testDemo</module>
-        <module>kaleidoscopeBpm</module>
-        <module>kaleidoscopeWeb</module>
+     <!--   <module>kaleidoscopeWeb</module>-->
+        <module>kaleidoscopeJbpm</module>
     </modules>
     <packaging>pom</packaging>
 

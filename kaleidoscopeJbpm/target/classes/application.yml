@@ -6,5 +6,8 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
     username: root
     password: root
-  activiti:
+  activiti: #开启历史信息
     db-history-used: true
+    #activiti会对所有表进行更新，不存在的情况会创建
+    database-schema-update: true
+    history-level: full

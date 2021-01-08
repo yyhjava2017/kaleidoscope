@@ -9,4 +9,7 @@ spring:
 mybatis:
   mapper-locations: classpath:com/user/dao/*.xml
 
-
+logging:
+  path: d:/log
+  level:
+    root: info

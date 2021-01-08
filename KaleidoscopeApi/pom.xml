@@ -14,6 +14,7 @@
     <modules>
         <module>KaleidoscopeUserApi</module>
         <module>KaleidoscopeEndSmokApi</module>
+        <module>kaleidoscopeJbpmApi</module>
     </modules>
     <dependencies>
         <dependency>

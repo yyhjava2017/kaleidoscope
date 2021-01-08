@@ -10,6 +10,8 @@ import test.entity.Register;
 import test.entity.Service;
 import test.entity.User;
 
+import java.util.List;
+
 public class Test {
 
     @org.junit.Test
@@ -24,5 +26,9 @@ public class Test {
         System.out.println(u);
         System.out.println(s);
         System.out.println(r);
+    }
+
+    public List<?> getNUm(){
+        return null;
     }
 }
