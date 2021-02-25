@@ -6,8 +6,10 @@ import com.common.entity.Result;
 import com.endsmok.entity.Article;
 import com.endsmok.entity.TestVO;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.cursor.Cursor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -28,5 +30,6 @@ public interface ArticleMapper extends BaseDao {
     void update(Article article);
 
     @Select("select * from t_test_v")
-    List<TestVO> getTestList();
+    @Options(fetchSize = Integer.MIN_VALUE)
+    Cursor<TestVO> getTestList();
 }
