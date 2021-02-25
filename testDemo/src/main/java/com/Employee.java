@@ -1,6 +1,9 @@
 package com;
 
-public class Employee implements Comparable<Employee>{
+import java.io.Serializable;
+
+public class Employee implements Comparable<Employee>, Serializable {
+
     private String name;
     private int age;
     private Long number;
@@ -33,6 +36,9 @@ public class Employee implements Comparable<Employee>{
         this.name = name;
         this.age = age;
         this.number = number;
+    }
+
+    public Employee() {
     }
 
     public Employee(String name) {

@@ -10,12 +10,12 @@
         <module name="kaleidoscopeBase" />
         <module name="kaleidoscopeJbpmApi" />
         <module name="KaleidoscopeEndSmokApi" />
-        <module name="kaleidoscopeJbpm" />
         <module name="kaleidoscopeUser" />
         <module name="KaleidoscopeUserApi" />
         <module name="testDemo" />
         <module name="KaleidoscopeEndSmoking" />
         <module name="kaleidoscopeCommon" />
+        <module name="kaleidoscopeJbpm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

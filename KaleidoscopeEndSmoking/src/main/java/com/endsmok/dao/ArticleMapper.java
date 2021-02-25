@@ -4,9 +4,13 @@ import com.base.dao.BaseDao;
 import com.common.constant.TableName;
 import com.common.entity.Result;
 import com.endsmok.entity.Article;
+import com.endsmok.entity.TestVO;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @zz yyh
@@ -22,4 +26,7 @@ public interface ArticleMapper extends BaseDao {
             "read_Num = #{readNum},comment_Num=#{commentNum},star_Num=#{starNum},content=#{content}" +
             " where id = #{id}")
     void update(Article article);
+
+    @Select("select * from t_test_v")
+    List<TestVO> getTestList();
 }
