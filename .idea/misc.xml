@@ -11,6 +11,8 @@
       <set>
         <option value="$PROJECT_DIR$/KaleidoscopeApi/KaleidoscopeUserApi/pom.xml" />
         <option value="$PROJECT_DIR$/KaleidoscopeApi/kaleidoscopeBpmApi/pom.xml" />
+        <option value="$PROJECT_DIR$/KaleidoscopeBaseApi/pom.xml" />
+        <option value="$PROJECT_DIR$/KaleidoscopeNBaseApi/pom.xml" />
         <option value="$PROJECT_DIR$/kaleidoscopeBpm/kaleidoscopeBpmApi/pom.xml" />
         <option value="$PROJECT_DIR$/kaleidoscopeBpm/pom.xml" />
         <option value="$PROJECT_DIR$/kaleidoscopeBpmApi/pom.xml" />

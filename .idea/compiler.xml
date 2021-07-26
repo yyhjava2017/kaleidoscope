@@ -8,19 +8,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="kaleidoscopeJbpmApi" />
+        <module name="baseApi" />
         <module name="kaleidoscopeBase" />
         <module name="kaleidoscopeJbpm" />
         <module name="testDemo" />
         <module name="KaleidoscopeEndSmokApi" />
         <module name="kaleidoscopeEndSmoking" />
-        <module name="kaleidoscopeBaseApi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="kaleidoscope_common" target="1.8" />
+      <module name="KaleidoscopeBaseApi" target="8" />
+      <module name="kaleidoscopeBaseApi" target="8" />
       <module name="kaleidoscopeBpm" target="1.8" />
       <module name="kaleidoscopeBpmApi" target="1.8" />
       <module name="kaleidoscopeCommon" target="8" />
+      <module name="KaleidoscopeNBaseApi" target="8" />
       <module name="kaleidoscopeUser" target="1.8" />
       <module name="KaleidoscopeUserApi" target="1.8" />
       <module name="kaleidoscopeWeb" target="1.8" />
@@ -28,8 +31,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="KaleidoscopeBaseApi" options="-parameters" />
       <module name="KaleidoscopeEndSmokApi" options="-parameters" />
+      <module name="KaleidoscopeNBaseApi" options="-parameters" />
       <module name="KaleidoscopeUserApi" options="-parameters" />
+      <module name="baseApi" options="-parameters" />
       <module name="kaleidoscopeBase" options="-parameters" />
       <module name="kaleidoscopeBaseApi" options="-parameters" />
       <module name="kaleidoscopeBpm" options="-parameters" />

@@ -10,7 +10,6 @@
     <modules>
         <module>kaleidoscopeBase</module>
         <module>KaleidoscopeApi</module>
-        <module>kaleidoscopeUser</module>
         <module>KaleidoscopeEndSmoking</module>
         <module>testDemo</module>
         <module>kaleidoscopeJbpm</module>

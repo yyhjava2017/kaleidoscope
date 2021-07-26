@@ -12,10 +12,9 @@
     <artifactId>KaleidoscopeApi</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>KaleidoscopeUserApi</module>
         <module>KaleidoscopeEndSmokApi</module>
         <module>kaleidoscopeJbpmApi</module>
-        <module>kaleidoscopeBaseApi</module>
+        <module>baseApi</module>
     </modules>
     <dependencies>
         <dependency>
