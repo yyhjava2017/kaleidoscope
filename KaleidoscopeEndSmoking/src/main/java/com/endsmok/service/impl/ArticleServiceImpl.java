@@ -3,11 +3,19 @@ package com.endsmok.service.impl;
 import com.common.constant.TableName;
 import com.common.entity.Result;
 import com.common.entity.StatusCode;
+import com.common.util.ExcelUtils;
 import com.endsmok.dao.ArticleMapper;
 import com.endsmok.entity.Article;
+import com.endsmok.entity.TestVO;
 import com.endsmok.service.ArticleService;
+import org.apache.ibatis.cursor.Cursor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.servlet.http.HttpServletResponse;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @zz yyh
@@ -32,8 +40,21 @@ public class ArticleServiceImpl implements ArticleService {
 
     }
 
+    @Override
     public Result save(Article article){
         articleMapper.save(article, TableName.YINY_ARTICLE);
         return new Result(StatusCode.SUCCESS,"success","保存成功",null);
+    }
+
+    @Transactional
+    @Override
+    public void exportExcel(HttpServletResponse response) {
+        Cursor<TestVO> cursor = articleMapper.getTestList();
+        Iterator<TestVO> iterator = cursor.iterator();
+        while(iterator.hasNext()){
+            TestVO vo = iterator.next();
+            System.out.println(vo.getV1());
+        }
+        //ExcelUtils.writeExcelWithName(response,list, TestVO.class,"hello");
     }
 }
