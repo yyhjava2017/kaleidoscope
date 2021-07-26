@@ -1,7 +1,8 @@
 package com.user.service;
 
-import com.common.entity.Result;
-import com.user.entity.UserEntity;
+import com.base.entity.Result;
+import user.entity.UserEntity;
+
 
 /**
  * @zz yyh

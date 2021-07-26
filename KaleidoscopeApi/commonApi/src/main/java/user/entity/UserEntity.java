@@ -1,11 +1,14 @@
 package user.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
 /**
  * @zz yyh
  * @time 2020-07
  */
+@Data
 public class UserEntity {
     private int id;             //主键id
     private String name;        //用户姓名

@@ -1,13 +1,12 @@
 package com.user.service.impl;
-
-import com.common.constant.TableName;
-import com.common.entity.Result;
-import com.common.entity.StatusCode;
+import com.base.constant.TableName;
+import com.base.entity.Result;
+import com.base.entity.StatusCode;
 import com.user.dao.UserMapper;
-import com.user.entity.UserEntity;
 import com.user.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import user.entity.UserEntity;
 
 import java.util.List;
 

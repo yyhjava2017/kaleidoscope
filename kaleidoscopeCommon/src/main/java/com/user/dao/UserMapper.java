@@ -1,12 +1,11 @@
 package com.user.dao;
 
+import com.base.constant.TableName;
 import com.base.dao.BaseDao;
-import com.common.constant.TableName;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import org.springframework.stereotype.Repository;
 import user.entity.UserEntity;
 
 import java.util.List;
@@ -15,7 +14,6 @@ import java.util.List;
  * @zz yyh
  * @time 2020-07
  */
-@Repository
 public interface UserMapper extends BaseDao {
 
     @Select("<script>" +

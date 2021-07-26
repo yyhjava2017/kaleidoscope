@@ -1,7 +1,8 @@
 package user.icontroller;
 
 
-import com.user.entity.UserEntity;
+import com.base.entity.Result;
+import user.entity.UserEntity;
 
 /**
  * @zz yyh
