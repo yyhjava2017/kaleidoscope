@@ -11,6 +11,7 @@ import test.entity.Service;
 import test.entity.User;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Test {
 
@@ -30,5 +31,10 @@ public class Test {
 
     public List<?> getNUm(){
         return null;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String next = scanner.next();
     }
 }

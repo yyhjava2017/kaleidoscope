@@ -9,10 +9,12 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/KaleidoscopeApi/KaleidoscopeUserApi/pom.xml" />
         <option value="$PROJECT_DIR$/KaleidoscopeApi/kaleidoscopeBpmApi/pom.xml" />
         <option value="$PROJECT_DIR$/kaleidoscopeBpm/kaleidoscopeBpmApi/pom.xml" />
         <option value="$PROJECT_DIR$/kaleidoscopeBpm/pom.xml" />
         <option value="$PROJECT_DIR$/kaleidoscopeBpmApi/pom.xml" />
+        <option value="$PROJECT_DIR$/kaleidoscopeCommon/pom.xml" />
         <option value="$PROJECT_DIR$/kaleidoscopeJbpmApi/pom.xml" />
         <option value="$PROJECT_DIR$/kaleidoscopeUser/pom.xml" />
         <option value="$PROJECT_DIR$/kaleidoscopeWeb/pom.xml" />

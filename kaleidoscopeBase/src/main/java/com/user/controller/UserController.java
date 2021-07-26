@@ -1,13 +1,13 @@
 package com.user.controller;
 
 import com.common.entity.Result;
-import com.common.entity.StatusCode;
+
 import com.user.entity.UserEntity;
 import com.user.icontroller.IUserController;
 import com.user.service.IUserService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 
 /**
  * @zz yyh

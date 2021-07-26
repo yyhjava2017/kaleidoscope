@@ -23,10 +23,5 @@
             <groupId>com.yiny</groupId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <artifactId>kaleidoscope_common</artifactId>
-            <groupId>com.yiny</groupId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 </project>
