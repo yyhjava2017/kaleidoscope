@@ -1,6 +1,6 @@
 package com.endsmok.service;
 
-import com.common.entity.Result;
+import com.base.entity.Result;
 import com.endsmok.entity.Article;
 
 import javax.servlet.http.HttpServletResponse;

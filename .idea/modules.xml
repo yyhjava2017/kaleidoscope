@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/kaleidoscopeBpm/kaleidoscopeBpm.iml" filepath="$PROJECT_DIR$/kaleidoscopeBpm/kaleidoscopeBpm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kaleidoscopeCommon/kaleidoscopeCommon.iml" filepath="$PROJECT_DIR$/kaleidoscopeCommon/kaleidoscopeCommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/kaleidoscopeUser/kaleidoscopeUser.iml" filepath="$PROJECT_DIR$/kaleidoscopeUser/kaleidoscopeUser.iml" />
     </modules>
   </component>

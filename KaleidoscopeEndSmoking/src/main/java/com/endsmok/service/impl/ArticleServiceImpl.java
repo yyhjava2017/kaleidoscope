@@ -1,9 +1,9 @@
 package com.endsmok.service.impl;
 
-import com.common.constant.TableName;
-import com.common.entity.Result;
-import com.common.entity.StatusCode;
-import com.common.util.ExcelUtils;
+
+import com.base.constant.TableName;
+import com.base.entity.Result;
+import com.base.entity.StatusCode;
 import com.endsmok.dao.ArticleMapper;
 import com.endsmok.entity.Article;
 import com.endsmok.entity.TestVO;
@@ -15,7 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.Iterator;
-import java.util.List;
 
 /**
  * @zz yyh
@@ -55,6 +54,5 @@ public class ArticleServiceImpl implements ArticleService {
             TestVO vo = iterator.next();
             System.out.println(vo.getV1());
         }
-        //ExcelUtils.writeExcelWithName(response,list, TestVO.class,"hello");
     }
 }

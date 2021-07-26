@@ -1,6 +1,6 @@
 package com.endsmok.controller;
 
-import com.common.entity.Result;
+import com.base.entity.Result;
 import com.endsmok.entity.Article;
 import com.endsmok.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,8 @@
 package com.endsmok.dao;
 
+import com.base.constant.TableName;
 import com.base.dao.BaseDao;
-import com.common.constant.TableName;
-import com.common.entity.Result;
+
 import com.endsmok.entity.Article;
 import com.endsmok.entity.TestVO;
 import org.apache.ibatis.annotations.Delete;
@@ -11,8 +11,6 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.cursor.Cursor;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 /**
  * @zz yyh

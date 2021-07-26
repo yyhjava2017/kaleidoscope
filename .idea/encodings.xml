@@ -4,10 +4,11 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/KaleidoscopeApi" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/KaleidoscopeApi/KaleidoscopeEndSmokApi/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/KaleidoscopeApi/baseApi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/KaleidoscopeApi/commonApi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/KaleidoscopeEndSmoking/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kaleidoscopeBase" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kaleidoscopeBase/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kaleidoscopeCommon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kaleidoscopeJbpm/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testDemo/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

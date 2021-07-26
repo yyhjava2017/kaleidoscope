@@ -7,21 +7,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/KaleidoscopeApi/KaleidoscopeUserApi/pom.xml" />
-        <option value="$PROJECT_DIR$/KaleidoscopeApi/kaleidoscopeBpmApi/pom.xml" />
-        <option value="$PROJECT_DIR$/KaleidoscopeBaseApi/pom.xml" />
-        <option value="$PROJECT_DIR$/KaleidoscopeNBaseApi/pom.xml" />
-        <option value="$PROJECT_DIR$/kaleidoscopeBpm/kaleidoscopeBpmApi/pom.xml" />
-        <option value="$PROJECT_DIR$/kaleidoscopeBpm/pom.xml" />
-        <option value="$PROJECT_DIR$/kaleidoscopeBpmApi/pom.xml" />
-        <option value="$PROJECT_DIR$/kaleidoscopeCommon/pom.xml" />
-        <option value="$PROJECT_DIR$/kaleidoscopeJbpmApi/pom.xml" />
-        <option value="$PROJECT_DIR$/kaleidoscopeUser/pom.xml" />
-        <option value="$PROJECT_DIR$/kaleidoscopeWeb/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
