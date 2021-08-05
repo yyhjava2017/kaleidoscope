@@ -1,7 +1,10 @@
 package com.user.controller;
 
 import com.base.entity.Result;
+import com.base.utils.ResultUtils;
+import com.user.service.RoleService;
 import io.swagger.annotations.Api;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import role.IRoleController;
 import role.entity.RoleEntity;
@@ -11,15 +14,20 @@ import role.entity.RoleEntity;
 @Api("角色接口")
 public class RoleController implements IRoleController {
 
+    @Autowired
+    private RoleService service;
+
     @Override
     @PostMapping("/")
     public Result add(RoleEntity roleEntity) {
-        return null;
+        service.add(roleEntity);
+        return ResultUtils.Success();
     }
 
     @Override
-    public Result query(RoleEntity roleEntity) {
-        return null;
+    @GetMapping("/{id}")
+    public Result query(String id) {
+        return ResultUtils.Success(service.queryById(id));
     }
 
     @Override
