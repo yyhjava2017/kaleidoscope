@@ -2,6 +2,7 @@ package com.user.dao;
 
 import com.base.constant.TableName;
 import com.base.dao.BaseDao;
+import login.entity.LoginBO;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -34,4 +35,17 @@ public interface UserMapper extends BaseDao {
             "last_Login_Time=#{lastLoginTime},count=#{count}" +
             "</script>" )
     void update(UserEntity userEntity);
+
+
+    @Select("<script>" +
+            "select * from "+ TableName.YINY_USER +""+
+            " where 1=1 " +
+            "<if test='loginName!=null and loginName !=\"\"' >" +
+            "and loginName = #{loginName}" +
+            "</if>"+
+            "<if test='password!=null and password !=\"\"' >" +
+            "and password = #{password}" +
+            "</if>"+
+            "</script>")
+    UserEntity login(LoginBO bo);
 }

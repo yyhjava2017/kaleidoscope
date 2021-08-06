@@ -1,6 +1,7 @@
 package com.user.service;
 
 import com.base.entity.Result;
+import login.entity.LoginBO;
 import user.entity.UserEntity;
 
 
@@ -17,4 +18,6 @@ public interface IUserService{
     Result delete(String id);
 
     Result update(UserEntity userEntity);
+
+    UserEntity login(LoginBO bo);
 }

@@ -7,7 +7,9 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.joda.time.DateTime;
+import org.springframework.util.DigestUtils;
 
+import javax.servlet.http.HttpServletResponse;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.Base64;
@@ -96,4 +98,22 @@ public class JwtUtils {
         claims.setExpiration(body.getExpiration());
         return claims;
     }
+
+    /**
+     * 加密规则
+     * @param password
+     * @return
+     */
+    public static String password(String password){
+        if(password == null)
+            return null;
+        password = "d" + password + "2";
+        password = DigestUtils.md5DigestAsHex(password.getBytes());
+        password = "c" + password + "d";
+        password = DigestUtils.md5DigestAsHex(password.getBytes());
+        return password;
+    }
+
+
+
 }

@@ -4,10 +4,12 @@ import com.base.entity.Result;
 import com.base.entity.StatusCode;
 import com.user.dao.UserMapper;
 import com.user.service.IUserService;
+import login.entity.LoginBO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import user.entity.UserEntity;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -16,7 +18,7 @@ import java.util.List;
  */
 @Service
 public class UserServiceImpl implements IUserService {
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Override
@@ -24,6 +26,11 @@ public class UserServiceImpl implements IUserService {
         userMapper.update(userEntity);
         return new Result(StatusCode.SUCCESS,"success","更新成功",null);
 
+    }
+
+    @Override
+    public UserEntity login(LoginBO bo) {
+        return userMapper.login(bo);
     }
 
     @Override
