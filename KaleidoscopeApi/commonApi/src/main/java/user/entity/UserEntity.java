@@ -20,7 +20,7 @@ public class UserEntity {
     private String email;       //邮箱
     private Date genTime;       //创建时间
     private Date lastLoginTime; //最后登陆时间
-    private Date count;         //登录次数
+    private int count;         //登录次数
 
 
     public UserEntity(int id, String name, int age) {
@@ -112,11 +112,11 @@ public class UserEntity {
         this.lastLoginTime = lastLoginTimr;
     }
 
-    public Date getCount() {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(Date count) {
+    public void setCount(int count) {
         this.count = count;
     }
 }

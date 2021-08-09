@@ -38,10 +38,10 @@ public interface UserMapper extends BaseDao {
 
 
     @Select("<script>" +
-            "select * from "+ TableName.YINY_USER +""+
-            " where 1=1 " +
+            "select * from "+ TableName.YINY_USER +" "+
+            "where 1=1 " +
             "<if test='loginName!=null and loginName !=\"\"' >" +
-            "and loginName = #{loginName}" +
+            "and login_Name = #{loginName}" +
             "</if>"+
             "<if test='password!=null and password !=\"\"' >" +
             "and password = #{password}" +

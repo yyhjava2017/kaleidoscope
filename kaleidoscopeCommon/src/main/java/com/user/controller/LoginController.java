@@ -51,8 +51,8 @@ public class LoginController implements ILoginController {
             return ResultUtils.Fail("账号或密码错误");
         }
         //更新token
-        String token = JwtUtils.generateTokenExpireInSeconds(userEntity, RsaUtils.getPrivateKey("null"), 600);
-        response.setHeader("kale-token", token);
+        String token = JwtUtils.generateTokenExpireInSeconds(userEntity, RsaUtils.getPrivateKey("D:\\mykey\\prikey"), 600);
+        response.setHeader(JwtUtils.AUTH_HEADER_KEY, token);
         Map<String, Object> dataMap = new HashMap<>();
         //密码不能返回
         userEntity.setPassword(null);

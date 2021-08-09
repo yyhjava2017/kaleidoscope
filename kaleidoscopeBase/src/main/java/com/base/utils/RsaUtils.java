@@ -125,8 +125,8 @@ public class RsaUtils {
 
 
     public static void main(String[] args) throws Exception {
-        RsaUtils.generateKey("D:\\test2\\pubkey","D:\\test2\\prikey","it222heima2",2048);
-        PrivateKey privateKey = RsaUtils.getPrivateKey("D:\\test2\\prikey");
+        RsaUtils.generateKey("D:\\mykey\\pubkey","D:\\mykey\\prikey","it222heima2",2048);
+        PrivateKey privateKey = RsaUtils.getPrivateKey("D:\\mykey\\prikey");
         System.out.println(privateKey.toString());
     }
 }

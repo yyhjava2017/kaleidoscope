@@ -17,6 +17,7 @@ import java.util.UUID;
 
 public class JwtUtils {
 
+    public static final String AUTH_HEADER_KEY = "kale-token";
     private static final String JWT_PAYLOAD_USER_KEY = "user";
     /**
      * 私钥加密token
