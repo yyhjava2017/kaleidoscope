@@ -31,7 +31,7 @@ public class HStringUtils {
         return "no";
     }
 
-    private static boolean isEmpty(Object valObj){
+    public static boolean isEmpty(Object valObj){
         if(valObj == null){
             return true;
         }else if(valObj instanceof String&&String.valueOf(valObj).equals("")){

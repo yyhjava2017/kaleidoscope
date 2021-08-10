@@ -46,7 +46,7 @@ public class SwaggerConfig {
 
     private static List<ApiKey> unifiedAuth() {
         List<ApiKey> arrayList = new ArrayList();
-        arrayList.add(new ApiKey("esc-token", "esc-token", "header"));
+        arrayList.add(new ApiKey("kale-token", "kale-token", "header"));
         return arrayList;
     }
 

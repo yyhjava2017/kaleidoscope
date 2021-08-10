@@ -29,7 +29,7 @@ public class JwtUtils {
      */
     public static String generateTokenExpireInMinutes(Object userInfo, PrivateKey privateKey, int expire) {
         return Jwts.builder()
-                .claim(JWT_PAYLOAD_USER_KEY, JsonUtils.toString(userInfo))
+                .claim(JWT_PAYLOAD_USER_KEY,JsonUtils.toString(userInfo))
                 .setId(createJTI())
                 .setExpiration(DateTime.now().plusMinutes(expire).toDate())
                 .signWith(SignatureAlgorithm.RS256, privateKey)
@@ -37,13 +37,14 @@ public class JwtUtils {
     }
     /**
      * 私钥加密token
-     *
      * @param userInfo   载荷中的数据
      * @param privateKey 私钥
      * @param expire     过期时间，单位秒
      * @return JWT
      */
     public static String generateTokenExpireInSeconds(Object userInfo, PrivateKey privateKey, int expire) {
+        String s = JsonUtils.toString(userInfo);
+        System.out.println(s);
         return Jwts.builder()
                 .claim(JWT_PAYLOAD_USER_KEY, JsonUtils.toString(userInfo))
                 .setId(createJTI())
@@ -97,6 +98,7 @@ public class JwtUtils {
         Payload<T> claims = new Payload<>();
         claims.setId(body.getId());
         claims.setExpiration(body.getExpiration());
+        claims.setUserInfo((T) body.get("user"));
         return claims;
     }
 
