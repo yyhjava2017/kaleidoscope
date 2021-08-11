@@ -5,6 +5,7 @@ import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
+import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
 import io.netty.handler.stream.ChunkedWriteHandler;
 
 public class WebSocketInitializer extends ChannelInitializer<SocketChannel> {
@@ -15,5 +16,6 @@ public class WebSocketInitializer extends ChannelInitializer<SocketChannel> {
         pipeline.addLast(new ChunkedWriteHandler());
         pipeline.addLast(new HttpObjectAggregator(1024*64));
         pipeline.addLast(new ChatHandler());
+        pipeline.addLast(new WebSocketServerProtocolHandler("/ws"));
     }
 }
