@@ -16,14 +16,14 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        // 从http请求头中取出token
+       /* // 从http请求头中取出token
         String token = request.getHeader(JwtUtils.AUTH_HEADER_KEY);
         Payload<String> infoFromToken = JwtUtils.getInfoFromToken(token, RsaUtils.getPublicKey("D:\\mykey\\pubkey"));
         String  userStr = infoFromToken.getUserInfo();
         UserEntity userEntity = JsonUtils.toBean(userStr, UserEntity.class);
         if(HStringUtils.isEmpty(userEntity.getId())){
             return false;
-        }
+        }*/
         return true;
     }
 

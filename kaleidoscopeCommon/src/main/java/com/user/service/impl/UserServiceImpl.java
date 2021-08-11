@@ -6,6 +6,13 @@ import com.base.utils.JwtUtils;
 import com.user.dao.UserMapper;
 import com.user.service.IUserService;
 import login.entity.LoginBO;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import user.entity.UserEntity;
 
@@ -17,7 +24,7 @@ import java.util.List;
  * @time 2020-07
  */
 @Service
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl implements IUserService, UserDetailsService {
     @Resource
     private UserMapper userMapper;
 
@@ -52,5 +59,11 @@ public class UserServiceImpl implements IUserService {
     public Result query(UserEntity userEntity) {
         List<UserEntity> list = userMapper.queryUsers(userEntity.getName());
         return new Result(StatusCode.SUCCESS,"success","查询成功",list);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        List<GrantedAuthority> auth = AuthorityUtils.commaSeparatedStringToAuthorityList("role");
+        return new User("mary",new BCryptPasswordEncoder().encode("123"),auth);
     }
 }
