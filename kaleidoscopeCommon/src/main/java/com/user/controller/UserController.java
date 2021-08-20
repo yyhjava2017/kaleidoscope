@@ -41,10 +41,10 @@ public class UserController implements IUserController {
         return userService.regist(userEntity);
     }
 
-
     @Override
     @RequestMapping(value = "/", method = RequestMethod.PUT)
     public Result update(UserEntity userEntity) {
         return userService.update(userEntity);
     }
+
 }
