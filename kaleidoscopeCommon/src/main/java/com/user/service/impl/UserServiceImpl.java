@@ -1,4 +1,5 @@
 package com.user.service.impl;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.base.constant.TableName;
 import com.base.entity.Result;
 import com.base.entity.StatusCode;
@@ -6,6 +7,7 @@ import com.base.utils.JwtUtils;
 import com.user.dao.UserMapper;
 import com.user.service.IUserService;
 import login.entity.LoginBO;
+import lombok.SneakyThrows;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
@@ -45,7 +47,7 @@ public class UserServiceImpl implements IUserService, UserDetailsService {
         String password = userEntity.getPassword();
         String password1 = JwtUtils.password(password);
         userEntity.setPassword(password1);
-        userMapper.save(userEntity, TableName.YINY_USER);
+        userMapper.insert(userEntity);
         return new Result(StatusCode.SUCCESS,"success","插入成功",null);
     }
 
@@ -62,8 +64,14 @@ public class UserServiceImpl implements IUserService, UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("login_Name",userName);
+        UserEntity userEntity = userMapper.selectOne(queryWrapper);
+        if(userEntity==null){
+            throw new UsernameNotFoundException("账号或者密码错误，请重新登录!");
+        }
         List<GrantedAuthority> auth = AuthorityUtils.commaSeparatedStringToAuthorityList("role");
-        return new User("mary",new BCryptPasswordEncoder().encode("123"),auth);
+        return new User(userEntity.getLoginName(),new BCryptPasswordEncoder().encode(userEntity.getPassword()),auth);
     }
 }

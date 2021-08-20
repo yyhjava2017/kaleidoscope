@@ -10,6 +10,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    /**
+     * 通过让UserService实现UserDetailsService接口，而达到兼容性
+     */
     @Autowired
     private UserDetailsService userServiceImpl;
     @Override

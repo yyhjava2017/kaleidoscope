@@ -1,5 +1,6 @@
 package user.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.util.Date;
@@ -9,6 +10,7 @@ import java.util.Date;
  * @time 2020-07
  */
 @Data
+@TableName(com.base.constant.TableName.YINY_USER)
 public class UserEntity {
     private int id;             //主键id
     private String name;        //用户姓名

@@ -1,5 +1,6 @@
 package com.user.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.base.constant.TableName;
 import com.base.dao.BaseDao;
 import login.entity.LoginBO;
@@ -15,7 +16,7 @@ import java.util.List;
  * @zz yyh
  * @time 2020-07
  */
-public interface UserMapper extends BaseDao {
+public interface UserMapper extends BaseMapper<UserEntity> {
 
     @Select("<script>" +
             "select * from "+ TableName.YINY_USER +""+

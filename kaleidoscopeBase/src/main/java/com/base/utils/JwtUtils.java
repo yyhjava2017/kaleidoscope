@@ -110,12 +110,13 @@ public class JwtUtils {
     public static String password(String password){
         if(password == null)
             return null;
-        password = "d" + password + "2";
+        /*password = "d" + password + "2";
         password = DigestUtils.md5DigestAsHex(password.getBytes());
         password = "c" + password + "d";
-        password = DigestUtils.md5DigestAsHex(password.getBytes());
+        password = DigestUtils.md5DigestAsHex(password.getBytes());*/
         return password;
     }
+
 
 
 
