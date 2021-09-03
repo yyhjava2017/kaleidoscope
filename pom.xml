@@ -10,7 +10,6 @@
     <modules>
         <module>kaleidoscopeBase</module>
         <module>KaleidoscopeApi</module>
-        <module>KaleidoscopeEndSmoking</module>
         <module>testDemo</module>
         <module>kaleidoscopeJbpm</module>
         <module>kaleidoscopeCommon</module>
@@ -18,12 +17,35 @@
     </modules>
     <packaging>pom</packaging>
 
+    <properties>
+        <cloud-alibaba.version>0.2.2.RELEASE</cloud-alibaba.version>
+    </properties>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.1.RELEASE</version>
         <relativePath/>
     </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>

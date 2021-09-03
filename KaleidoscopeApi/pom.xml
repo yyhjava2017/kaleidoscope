@@ -12,7 +12,6 @@
     <artifactId>KaleidoscopeApi</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>KaleidoscopeEndSmokApi</module>
         <module>kaleidoscopeJbpmApi</module>
         <module>commonApi</module>
     </modules>

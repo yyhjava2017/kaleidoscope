@@ -13,7 +13,6 @@
         <module name="kaleidoscopeBase" />
         <module name="kaleidoscopeJbpm" />
         <module name="testDemo" />
-        <module name="KaleidoscopeEndSmokApi" />
         <module name="CommonApi" />
         <module name="commonApi" />
       </profile>
@@ -26,6 +25,7 @@
       <module name="kaleidoscopeBaseApi" target="8" />
       <module name="kaleidoscopeBpm" target="1.8" />
       <module name="kaleidoscopeBpmApi" target="1.8" />
+      <module name="KaleidoscopeEndSmokApi" target="1.8" />
       <module name="kaleidoscopeEndSmoking" target="1.8" />
       <module name="KaleidoscopeNBaseApi" target="8" />
       <module name="kaleidoscopeUser" target="1.8" />
