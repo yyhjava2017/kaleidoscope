@@ -44,6 +44,7 @@ public class UserController implements IUserController {
     @Override
     @RequestMapping(value = "/", method = RequestMethod.PUT)
     public Result update(UserEntity userEntity) {
+        System.out.println("hello");
         return userService.update(userEntity);
     }
 

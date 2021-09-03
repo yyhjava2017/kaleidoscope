@@ -7,10 +7,14 @@ import com.base.utils.ResultUtils;
 import com.base.utils.RsaUtils;
 import com.user.service.IUserService;
 import com.user.service.LoginService;
+import io.lettuce.core.RedisClient;
+import io.lettuce.core.api.StatefulRedisConnection;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import login.ILoginController;
 import login.entity.LoginBO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,8 +34,11 @@ import java.util.Map;
 @Api(description = "登录相关接口")
 public class LoginController implements ILoginController {
 
+    @Autowired
+    private RedisTemplate redisTemplate;
     @Resource
     private IUserService userService;
+
 
     @PostMapping("/login")
     @ApiOperation(value = "登录接口")
@@ -52,6 +59,7 @@ public class LoginController implements ILoginController {
         }
         //更新token
         String token = JwtUtils.generateTokenExpireInSeconds(userEntity, RsaUtils.getPrivateKey("D:\\mykey\\prikey"), 600);
+        redisTemplate.opsForValue().set(token,userEntity);
         response.setHeader(JwtUtils.AUTH_HEADER_KEY, token);
         Map<String, Object> dataMap = new HashMap<>();
         //密码不能返回

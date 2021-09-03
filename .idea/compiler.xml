@@ -8,12 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="kaleidoscopeCommon" />
+        <module name="kaleidoscopeGateWay" />
         <module name="kaleidoscopeJbpmApi" />
         <module name="kaleidoscopeBase" />
         <module name="kaleidoscopeJbpm" />
         <module name="testDemo" />
         <module name="KaleidoscopeEndSmokApi" />
-        <module name="kaleidoscopeEndSmoking" />
         <module name="CommonApi" />
         <module name="commonApi" />
       </profile>
@@ -26,6 +26,7 @@
       <module name="kaleidoscopeBaseApi" target="8" />
       <module name="kaleidoscopeBpm" target="1.8" />
       <module name="kaleidoscopeBpmApi" target="1.8" />
+      <module name="kaleidoscopeEndSmoking" target="1.8" />
       <module name="KaleidoscopeNBaseApi" target="8" />
       <module name="kaleidoscopeUser" target="1.8" />
       <module name="KaleidoscopeUserApi" target="1.8" />
@@ -47,6 +48,7 @@
       <module name="kaleidoscopeBpmApi" options="-parameters" />
       <module name="kaleidoscopeCommon" options="-parameters" />
       <module name="kaleidoscopeEndSmoking" options="-parameters" />
+      <module name="kaleidoscopeGateWay" options="-parameters" />
       <module name="kaleidoscopeJbpm" options="-parameters" />
       <module name="kaleidoscopeJbpmApi" options="-parameters" />
       <module name="kaleidoscopeUser" options="-parameters" />
