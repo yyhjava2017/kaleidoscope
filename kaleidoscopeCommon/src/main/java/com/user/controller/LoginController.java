@@ -45,7 +45,7 @@ public class LoginController implements ILoginController {
     public Result login(HttpServletResponse response, @RequestBody LoginBO bo) throws InvalidKeySpecException, NoSuchAlgorithmException, IOException {
 
         String password = bo.getPassword();
-        String username = bo.getLoginName();
+        String username = bo.getUsername();
         if(StringUtils.isEmpty(username))
             return ResultUtils.Fail("账号不能为空");
         if(StringUtils.isEmpty(password))
