@@ -5,6 +5,7 @@ import com.user.security.JwtTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -34,7 +35,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Autowired
     private UserDetailsService userServiceImpl;
-
+    @Autowired
+    private RedisTemplate redisTemplate;
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
@@ -63,8 +65,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         jwtLoginFilter.setAuthenticationSuccessHandler(authenticationSuccessHandler);
         jwtLoginFilter.setAuthenticationFailureHandler(authenticationFailureHandler);
 
-        JwtTokenFilter jwtTokenFilter = new JwtTokenFilter();
-
+        JwtTokenFilter jwtTokenFilter = new JwtTokenFilter(redisTemplate);
         // 使用自定义验证实现器
         JwtAuthenticationProvider jwtAuthenticationProvider = new JwtAuthenticationProvider(userServiceImpl, passwordEncoder);
 

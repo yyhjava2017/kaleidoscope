@@ -1,6 +1,6 @@
 package com.user.security.filter;
 
-import com.user.utill.JwtTokenUtils;
+import com.user.utill.JwtTokenUtilsBak;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
@@ -23,14 +23,14 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
-        String tokenHeader = request.getHeader(JwtTokenUtils.TOKEN_HEADER);
+        String tokenHeader = request.getHeader(JwtTokenUtilsBak.TOKEN_HEADER);
         //如果请求头中没有Authorization信息则直接放行了
-        if(tokenHeader == null || !tokenHeader.startsWith(JwtTokenUtils.TOKEN_PREFIX)){
+        if(tokenHeader == null || !tokenHeader.startsWith(JwtTokenUtilsBak.TOKEN_PREFIX)){
             chain.doFilter(request, response);
             return;
         }
         //如果请求头中有token,则进行解析，并且设置认证信息
-        if(!JwtTokenUtils.isExpiration(tokenHeader.replace(JwtTokenUtils.TOKEN_PREFIX,""))){
+        if(!JwtTokenUtilsBak.isExpiration(tokenHeader.replace(JwtTokenUtilsBak.TOKEN_PREFIX,""))){
             //设置上下文
             UsernamePasswordAuthenticationToken authentication = getAuthentication(tokenHeader);
             SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -40,10 +40,10 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {
 
     //获取用户信息
     private UsernamePasswordAuthenticationToken getAuthentication(String tokenHeader){
-        String token = tokenHeader.replace(JwtTokenUtils.TOKEN_PREFIX, "");
-        String username = JwtTokenUtils.getUserName(token);
+        String token = tokenHeader.replace(JwtTokenUtilsBak.TOKEN_PREFIX, "");
+        String username = JwtTokenUtilsBak.getUserName(token);
         // 获得权限 添加到权限上去
-        String role = JwtTokenUtils.getUserRole(token);
+        String role = JwtTokenUtilsBak.getUserRole(token);
         List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
         roles.add(new GrantedAuthority() {
             @Override

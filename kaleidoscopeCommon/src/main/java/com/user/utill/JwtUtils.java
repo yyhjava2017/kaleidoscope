@@ -1,4 +1,4 @@
-package com.user.security;
+package com.user.utill;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
@@ -54,8 +54,8 @@ public class JwtUtils {
      * 生成Token
      *
      * @param id        编号
-     * @param issuer    该JWT的签发者，是否使用是可选的
-     * @param subject   该JWT所面向的用户，是否使用是可选的；
+     * @param issuer    该JWT的签发者，可选
+     * @param subject   该JWT所面向的用户，可选；
      * @param ttlMillis 签发时间
      * @return token String
      */

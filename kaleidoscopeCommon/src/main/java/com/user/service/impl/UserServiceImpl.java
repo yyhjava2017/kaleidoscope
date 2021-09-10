@@ -5,6 +5,7 @@ import com.base.entity.Result;
 import com.base.entity.StatusCode;
 import com.base.utils.JwtUtils;
 import com.user.dao.UserMapper;
+import com.user.entitiy.JwtUser;
 import com.user.service.IUserService;
 import login.entity.LoginBO;
 import lombok.SneakyThrows;
@@ -64,7 +65,7 @@ public class UserServiceImpl implements IUserService, UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+    public JwtUser loadUserByUsername(String userName) throws UsernameNotFoundException {
         QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("login_Name",userName);
         UserEntity userEntity = userMapper.selectOne(queryWrapper);
@@ -72,6 +73,10 @@ public class UserServiceImpl implements IUserService, UserDetailsService {
             throw new UsernameNotFoundException("账号或者密码错误，请重新登录!");
         }
         List<GrantedAuthority> auth = AuthorityUtils.commaSeparatedStringToAuthorityList("role");
-        return new User(userEntity.getLoginName(),new BCryptPasswordEncoder().encode(userEntity.getPassword()),auth);
+        JwtUser user = new JwtUser();
+        user.setUsername(userEntity.getLoginName());
+        user.setPassword(new BCryptPasswordEncoder().encode(userEntity.getPassword()));
+        user.setAuthorities(auth);
+        return user;
     }
 }

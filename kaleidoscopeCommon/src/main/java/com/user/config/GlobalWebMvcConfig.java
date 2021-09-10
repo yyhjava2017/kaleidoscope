@@ -1,6 +1,5 @@
 package com.user.config;
 
-import com.user.Interceptor.AuthenticationInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -26,18 +25,5 @@ public class GlobalWebMvcConfig implements WebMvcConfigurer {
                 .allowedHeaders("*")
                 // 暴露哪些头部信息（因为跨域访问默认不能获取全部头部信息）
                 .exposedHeaders("Server","Content-Length", "Authorization", "Access-Token", "Access-Control-Allow-Origin","Access-Control-Allow-Credentials");
-    }
-
-    /**
-     * 添加拦截器
-     * @param registry
-     */
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        //添加权限拦截器
-        registry.addInterceptor(new AuthenticationInterceptor())
-                .addPathPatterns("/**")
-                .excludePathPatterns("/static/**")
-                .excludePathPatterns("/login/**");
     }
 }

@@ -24,7 +24,7 @@ spring:
     maxOpenPreparedStatements: 20
   redis:
     port: 6379
-    host: 192.168.57.128
+    host: 192.168.57.132
     lettuce:
       pool:
         max-active: 8

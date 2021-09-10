@@ -1,5 +1,6 @@
 package com.user.security;
 
+import com.user.entitiy.JwtUser;
 import org.springframework.security.authentication.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -27,7 +28,7 @@ public class JwtAuthenticationProvider implements AuthenticationProvider {
      */
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        UserDetails userDetails = userDetailsService.loadUserByUsername(authentication.getName());
+        JwtUser userDetails = (JwtUser) userDetailsService.loadUserByUsername(authentication.getName());
         //转换authentication 认证时会先调用support方法,受支持才会调用,所以能强转
         JwtLoginToken jwtLoginToken = (JwtLoginToken) authentication;
         defaultCheck(userDetails);
