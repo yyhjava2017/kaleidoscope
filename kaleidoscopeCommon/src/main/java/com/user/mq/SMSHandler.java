@@ -1,15 +1,15 @@
-package com.rabbitmq;
+package com.user.mq;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FanoutDxConsumer {
+public class SMSHandler {
 
     @RabbitHandler
-    @RabbitListener(queues = {"sms.fanout.queue"})
+    @RabbitListener(queues = {"message.queue"})
     public void handlerMsg(String message){
-        System.out.println("短信已收到消息："+message);
+        System.out.println("接收消息："+message);
     }
 }

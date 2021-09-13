@@ -9,6 +9,8 @@ import com.user.entitiy.JwtUser;
 import com.user.service.IUserService;
 import login.entity.LoginBO;
 import lombok.SneakyThrows;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
@@ -31,6 +33,9 @@ public class UserServiceImpl implements IUserService, UserDetailsService {
     @Resource
     private UserMapper userMapper;
 
+    @Autowired
+    private RabbitTemplate template;
+
     @Override
     public Result update(UserEntity userEntity) {
         userMapper.update(userEntity);
@@ -49,6 +54,8 @@ public class UserServiceImpl implements IUserService, UserDetailsService {
         String password1 = JwtUtils.password(password);
         userEntity.setPassword(password1);
         userMapper.insert(userEntity);
+        //注册成功，通过消息队列异步发送短信通知
+        template.convertAndSend("message.queue","短信通知：您已注册成功，可以登录使用!");
         return new Result(StatusCode.SUCCESS,"success","插入成功",null);
     }
 

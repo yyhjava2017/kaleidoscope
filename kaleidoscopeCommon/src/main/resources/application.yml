@@ -1,5 +1,8 @@
 server:
   port: 9001
+#虚拟机ip
+vIP: 192.168.57.133
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/yinydb?characterEncoding=utf-8&useSSL=false
@@ -24,7 +27,7 @@ spring:
     maxOpenPreparedStatements: 20
   redis:
     port: 6379
-    host: 192.168.57.132
+    host: ${vIP}
     lettuce:
       pool:
         max-active: 8
@@ -32,6 +35,13 @@ spring:
         min-idle: 0
         max-wait: 1000ms
       shutdown-timeout: 100ms
+  rabbitmq:
+    username: yyh
+    password: yyh123345
+    virtual-host: /
+    host: ${vIP}
+    port: 5672
+#日志
 logging:
   path: d:/log
   level:
