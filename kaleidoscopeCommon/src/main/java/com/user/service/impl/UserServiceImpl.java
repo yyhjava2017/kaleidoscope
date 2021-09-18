@@ -79,7 +79,7 @@ public class UserServiceImpl implements IUserService, UserDetailsService {
         if(userEntity==null){
             throw new UsernameNotFoundException("账号或者密码错误，请重新登录!");
         }
-        List<GrantedAuthority> auth = AuthorityUtils.commaSeparatedStringToAuthorityList("role");
+        List<GrantedAuthority> auth = AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_admin,ROLE_normal,aaa");
         JwtUser user = new JwtUser();
         user.setUsername(userEntity.getLoginName());
         user.setPassword(new BCryptPasswordEncoder().encode(userEntity.getPassword()));

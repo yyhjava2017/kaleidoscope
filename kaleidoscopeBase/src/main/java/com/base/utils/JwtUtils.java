@@ -7,9 +7,6 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.joda.time.DateTime;
-import org.springframework.util.DigestUtils;
-
-import javax.servlet.http.HttpServletResponse;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.Base64;

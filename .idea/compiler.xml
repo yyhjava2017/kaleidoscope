@@ -17,43 +17,15 @@
         <module name="commonApi" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="baseApi" target="8" />
-      <module name="CommonApi" target="8" />
-      <module name="kaleidoscope_common" target="1.8" />
-      <module name="KaleidoscopeBaseApi" target="8" />
-      <module name="kaleidoscopeBaseApi" target="8" />
-      <module name="kaleidoscopeBpm" target="1.8" />
-      <module name="kaleidoscopeBpmApi" target="1.8" />
-      <module name="KaleidoscopeEndSmokApi" target="1.8" />
-      <module name="kaleidoscopeEndSmoking" target="1.8" />
-      <module name="KaleidoscopeNBaseApi" target="8" />
-      <module name="kaleidoscopeUser" target="1.8" />
-      <module name="KaleidoscopeUserApi" target="1.8" />
-      <module name="kaleidoscopeWeb" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="CommonApi" options="-parameters" />
-      <module name="KaleidoscopeBaseApi" options="-parameters" />
-      <module name="KaleidoscopeEndSmokApi" options="-parameters" />
-      <module name="KaleidoscopeNBaseApi" options="-parameters" />
-      <module name="KaleidoscopeUserApi" options="-parameters" />
-      <module name="baseApi" options="-parameters" />
       <module name="commonApi" options="-parameters" />
       <module name="kaleidoscopeBase" options="-parameters" />
-      <module name="kaleidoscopeBaseApi" options="-parameters" />
-      <module name="kaleidoscopeBpm" options="-parameters" />
-      <module name="kaleidoscopeBpmApi" options="-parameters" />
       <module name="kaleidoscopeCommon" options="-parameters" />
-      <module name="kaleidoscopeEndSmoking" options="-parameters" />
       <module name="kaleidoscopeGateWay" options="-parameters" />
       <module name="kaleidoscopeJbpm" options="-parameters" />
       <module name="kaleidoscopeJbpmApi" options="-parameters" />
-      <module name="kaleidoscopeUser" options="-parameters" />
-      <module name="kaleidoscopeWeb" options="-parameters" />
-      <module name="kaleidoscope_common" options="-parameters" />
       <module name="testDemo" options="-parameters" />
     </option>
   </component>

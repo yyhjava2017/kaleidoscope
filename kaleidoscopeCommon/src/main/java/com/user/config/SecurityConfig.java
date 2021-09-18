@@ -80,6 +80,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         return object;
                     }
                 })
+                .antMatchers("/admin").hasRole("admin")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin();

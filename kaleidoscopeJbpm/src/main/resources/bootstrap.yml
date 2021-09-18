@@ -1,0 +1,18 @@
+server:
+  port: 9004
+
+#虚拟机ip
+vIP: 192.168.57.133
+spring:
+  application:
+    name: configTest
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${vIP}:28848
+      config:
+        server-addr: ${vIP}:28848
+        file-extension: yaml
+
+#${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.extension.extension}
+#configTest-dev.yml

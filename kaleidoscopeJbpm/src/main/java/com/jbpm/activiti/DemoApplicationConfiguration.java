@@ -82,6 +82,7 @@ public class DemoApplicationConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
+                .antMatchers("/test/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()

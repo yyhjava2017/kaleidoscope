@@ -1,5 +1,6 @@
 package login.entity;
 
+
 import lombok.Data;
 
 @Data
