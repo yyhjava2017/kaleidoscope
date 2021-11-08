@@ -6,11 +6,6 @@ vIP: 192.168.57.133
 spring:
   application:
     name: kdcommon
-  #nacos注册
-  cloud:
-    nacos:
-      discovery:
-        server-addr: ${vIP}:28848
   datasource:
     url: jdbc:mysql://localhost:3306/yinydb?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -53,6 +48,12 @@ management:
   endpoint:
     nacos-discovery:
       enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone:
+        http://localhost:9009/eureka/
 
 #日志
 logging:

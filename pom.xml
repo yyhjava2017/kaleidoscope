@@ -14,35 +14,28 @@
         <module>kaleidoscopeJbpm</module>
         <module>kaleidoscopeCommon</module>
         <module>kaleidoscopeGateWay</module>
+        <module>eurekaServer</module>
+        <module>gateway</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
         <cloud-alibaba.version>2.1.0.RELEASE</cloud-alibaba.version>
     </properties>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
-        <relativePath/>
-    </parent>
-
+    <!--dependencyManagement只是声明该依赖的版本号，没有实际引入。所以通过继承无法直接获得-->
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-redis</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>2.2.6.RELEASE</version>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Hoxton.SR3</version>
+                <version>Hoxton.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -52,6 +45,11 @@
                 <version>${cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>2.2.2.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

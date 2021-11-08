@@ -8,25 +8,25 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="kaleidoscopeCommon" />
-        <module name="kaleidoscopeGateWay" />
         <module name="kaleidoscopeJbpmApi" />
         <module name="kaleidoscopeBase" />
         <module name="kaleidoscopeJbpm" />
         <module name="testDemo" />
         <module name="CommonApi" />
+        <module name="eurekaServer" />
+        <module name="gateway" />
         <module name="commonApi" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="commonApi" options="-parameters" />
-      <module name="kaleidoscopeBase" options="-parameters" />
-      <module name="kaleidoscopeCommon" options="-parameters" />
-      <module name="kaleidoscopeGateWay" options="-parameters" />
-      <module name="kaleidoscopeJbpm" options="-parameters" />
-      <module name="kaleidoscopeJbpmApi" options="-parameters" />
-      <module name="testDemo" options="-parameters" />
+      <module name="commonApi" options="" />
+      <module name="kaleidoscopeBase" options="" />
+      <module name="kaleidoscopeCommon" options="" />
+      <module name="kaleidoscopeJbpm" options="" />
+      <module name="kaleidoscopeJbpmApi" options="" />
+      <module name="testDemo" options="" />
     </option>
   </component>
 </project>

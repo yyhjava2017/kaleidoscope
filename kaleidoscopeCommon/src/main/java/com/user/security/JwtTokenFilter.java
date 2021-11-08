@@ -27,7 +27,7 @@ public class JwtTokenFilter extends OncePerRequestFilter{
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         try {
-            String token = httpServletRequest.getHeader("kale-token");
+           /* String token = httpServletRequest.getHeader("kale-token");
             if (StringUtils.isEmpty(token)) {
                 httpServletResponse.setContentType("application/json;charset=UTF-8");
                 System.out.println("未登录");
@@ -46,7 +46,7 @@ public class JwtTokenFilter extends OncePerRequestFilter{
             System.out.println(user);
             JwtLoginToken jwtLoginToken = new JwtLoginToken(user, "", user.getAuthorities());
             jwtLoginToken.setDetails(new WebAuthenticationDetails(httpServletRequest));
-            SecurityContextHolder.getContext().setAuthentication(jwtLoginToken);
+            SecurityContextHolder.getContext().setAuthentication(jwtLoginToken);*/
             filterChain.doFilter(httpServletRequest, httpServletResponse);
         } catch (Exception e) {
             e.printStackTrace();

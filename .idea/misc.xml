@@ -11,6 +11,7 @@
       <set>
         <option value="$PROJECT_DIR$/KaleidoscopeApi/KaleidoscopeEndSmokApi/pom.xml" />
         <option value="$PROJECT_DIR$/KaleidoscopeEndSmoking/pom.xml" />
+        <option value="$PROJECT_DIR$/kaleidoscopeGateWay/pom.xml" />
       </set>
     </option>
   </component>
