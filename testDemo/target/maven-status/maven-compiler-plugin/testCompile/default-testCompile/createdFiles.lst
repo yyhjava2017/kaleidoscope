@@ -1,0 +1,13 @@
+test\entity\User.class
+test\entity\Service.class
+test\com\yyh\lambdaFun\LambdaTest.class
+test\entity\Register.class
+test\entity\BaseObj.class
+test\LambdaTest.class
+test\Test.class
+test\com\yyh\lambdaFun\FunOne.class
+test\StreamAPITest.class
+test\com\yyh\lambdaFun\FunTwo.class
+test\SpringDConfig.class
+test\entity\MyFun.class
+test\entity\People.class
