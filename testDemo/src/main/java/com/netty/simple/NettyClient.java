@@ -7,12 +7,35 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.string.StringEncoder;
+
+import java.net.InetSocketAddress;
 
 public class NettyClient {
 
     public static void main(String[] args) throws Exception {
-        NettyClient.start();
+        NettyClient.startClient01();
     }
+
+
+    public static void startClient01() throws InterruptedException {
+        new Bootstrap()
+                .group(new NioEventLoopGroup())
+                .channel(NioSocketChannel.class)
+                .handler(new ChannelInitializer<NioSocketChannel>() {
+                    @Override
+                    protected void initChannel(NioSocketChannel ch) throws Exception {
+                        ch.pipeline().addLast(new StringEncoder());
+
+                    }
+                })
+                .connect(new InetSocketAddress("localhost",8080))
+                .sync()
+                .channel()
+                .writeAndFlush("hello");
+
+    }
+
 
     public static void start() throws Exception{
         //事件循环组

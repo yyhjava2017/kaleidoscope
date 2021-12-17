@@ -1,12 +1,8 @@
 package test;
 
-import com.Employee;
+import com.pojo.Employee;
 import org.junit.Test;
-import org.springframework.expression.spel.ast.NullLiteral;
-import test.entity.MyFun;
-import test.entity.People;
 
-import java.io.PrintStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
@@ -14,7 +10,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class LambdaTest {
     List<Employee> list = Arrays.asList(new Employee("yyh", 12, 21l),

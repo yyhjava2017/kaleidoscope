@@ -12,8 +12,8 @@
     <artifactId>KaleidoscopeApi</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>kaleidoscopeJbpmApi</module>
         <module>commonApi</module>
+        <module>founderApi</module>
     </modules>
 
     <dependencies>

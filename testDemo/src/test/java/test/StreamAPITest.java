@@ -1,6 +1,6 @@
 package test;
 
-import com.Employee;
+import com.pojo.Employee;
 import org.junit.Test;
 
 import java.util.ArrayList;
