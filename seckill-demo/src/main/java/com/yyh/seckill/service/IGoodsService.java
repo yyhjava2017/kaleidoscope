@@ -2,6 +2,9 @@ package com.yyh.seckill.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yyh.seckill.pojo.Goods;
+import com.yyh.seckill.pojo.GoodsVO;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.yyh.seckill.pojo.Goods;
  */
 public interface IGoodsService extends IService<Goods> {
 
+    List<GoodsVO> getGoodList();
 }

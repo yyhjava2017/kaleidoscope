@@ -2,6 +2,9 @@ package com.yyh.seckill.mapper;
 
 import com.yyh.seckill.pojo.Goods;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.yyh.seckill.pojo.GoodsVO;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface GoodsMapper extends BaseMapper<Goods> {
 
+    List<GoodsVO> getGoodList();
 }
