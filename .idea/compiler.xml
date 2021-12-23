@@ -13,6 +13,7 @@
         <module name="seckill-demo" />
         <module name="kaleidoscopeBase" />
         <module name="testDemo" />
+        <module name="codeGeneration" />
         <module name="CommonApi" />
         <module name="eurekaServer" />
         <module name="gateway" />
@@ -26,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="codeGeneration" options="-parameters" />
       <module name="commonApi" options="" />
       <module name="kaleidoscopeBase" options="" />
       <module name="kaleidoscopeCommon" options="" />
