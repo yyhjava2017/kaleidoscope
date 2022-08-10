@@ -17,7 +17,9 @@ public enum StatusCode {
     SUCCESS(200,"SUCCESS"),
     ERROR(500,"ERROR"),
     BIND_ERROR(500220,"参数绑定异常"),
-    LOGIN_ERROR(500210,"用户或者密码错误");
+    LOGIN_ERROR(500210,"用户或者密码错误"),
+    REBUY_ERROR(500410,"重复购买"),
+    EMPTY_ERROR(500310,"库存不足");
 
     StatusCode(Integer code,String message){
         this.code = code;

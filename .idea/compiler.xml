@@ -12,8 +12,6 @@
         <module name="founderApi" />
         <module name="seckill-demo" />
         <module name="kaleidoscopeBase" />
-        <module name="testDemo" />
-        <module name="codeGeneration" />
         <module name="CommonApi" />
         <module name="eurekaServer" />
         <module name="gateway" />
@@ -21,8 +19,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="codeGeneration" target="1.8" />
       <module name="kaleidoscopeJbpm" target="1.8" />
       <module name="kaleidoscopeJbpmApi" target="1.8" />
+      <module name="testDemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

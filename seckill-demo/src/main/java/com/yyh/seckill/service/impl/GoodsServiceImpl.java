@@ -28,6 +28,11 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
     private GoodsMapper goodsMapper;
 
     @Override
+    public GoodsVO getDetailById(String goodsId) {
+        return goodsMapper.getDetailById(goodsId);
+    }
+
+    @Override
     public List<GoodsVO> getGoodList() {
         return goodsMapper.getGoodList();
     }

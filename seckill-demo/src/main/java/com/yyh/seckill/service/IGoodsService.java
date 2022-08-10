@@ -17,4 +17,6 @@ import java.util.List;
 public interface IGoodsService extends IService<Goods> {
 
     List<GoodsVO> getGoodList();
+
+    GoodsVO getDetailById(String goodsId);
 }

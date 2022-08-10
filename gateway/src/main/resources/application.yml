@@ -14,21 +14,21 @@ spring:
           uri: lb://kdcommon
           predicates:
             - Path=/**
-#    nacos:
-#      discovery:
-#        server-addr: 192.168.57.133:8848
+    nacos:
+      discovery:
+        server-addr: 175.178.192.58:8848
 
-eureka:
-  instance:
-    hostname: gateway
-  client:
-    service-url:
-      defaultZone: http://localhost:9009/eureka/
+#eureka:
+#  instance:
+#    hostname: gateway
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:9009/eureka/
 
 #nacos监控暴露
 #management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: '*'
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 

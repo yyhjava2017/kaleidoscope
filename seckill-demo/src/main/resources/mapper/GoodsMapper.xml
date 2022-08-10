@@ -19,6 +19,15 @@
     </sql>
 
     <select id="getGoodList" resultType="com.yyh.seckill.pojo.GoodsVO">
+        select g.id,g.goods_name,g.goods_title,g.goods_img,g.goods_detail,g.goods_price,t.seckill_price,t.stock_count,t.start_date,t.end_date
+        from t_seckill_goods t
+        left join t_goods g on g.id = t.goods_id
+    </select>
 
+    <select id="getDetailById" resultType="com.yyh.seckill.pojo.GoodsVO">
+        select g.id,g.goods_name,g.goods_title,g.goods_img,g.goods_detail,g.goods_price,t.seckill_price,t.stock_count,t.start_date,t.end_date
+        from t_seckill_goods t
+        left join t_goods g on g.id = t.goods_id
+        where g.id = #{goodsId}
     </select>
 </mapper>
