@@ -13,13 +13,13 @@
         <module name="seckill-demo" />
         <module name="kaleidoscopeBase" />
         <module name="CommonApi" />
-        <module name="eurekaServer" />
         <module name="gateway" />
         <module name="commonApi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="codeGeneration" target="1.8" />
+      <module name="eurekaServer" target="1.8" />
       <module name="kaleidoscopeJbpm" target="1.8" />
       <module name="kaleidoscopeJbpmApi" target="1.8" />
       <module name="testDemo" target="1.8" />
