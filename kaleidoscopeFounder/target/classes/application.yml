@@ -1,16 +1,16 @@
 server:
   port: 9006
+#虚拟机ip
+vIP: 175.178.192.58
 
 spring:
   application:
     name: kdfounder
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${vIP}:8848
 
-eureka:
-  instance:
-    hostname: kdfounder
-  client:
-    service-url:
-      defaultZone: http://localhost:9009/eureka/
 
 #设置超时时间
 feign:
